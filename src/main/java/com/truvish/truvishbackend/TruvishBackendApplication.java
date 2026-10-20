@@ -1,0 +1,22 @@
+package com.truvish.truvishbackend;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.scheduling.annotation.EnableScheduling;
+
+@SpringBootApplication
+@EnableScheduling
+public class TruvishBackendApplication {
+
+	public static void internCleaan() {
+
+	}
+
+	public static void main(String[] args) {
+
+		SpringApplication.run(
+				TruvishBackendApplication.class,
+				args
+		);
+	}
+}

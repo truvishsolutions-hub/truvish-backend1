@@ -1,0 +1,138 @@
+package com.truvish.truvishbackend.TruBlankCode.dto;
+
+import jakarta.validation.constraints.NotNull;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class AssignClientRequest {
+
+    // =========================================================
+    // CLIENT
+    // =========================================================
+
+    @NotNull(message = "clientId is required")
+    private Long clientId;
+
+    private String clientName;
+
+    private String clientImg;
+
+    /*
+     * Multiple client brands are supported.
+     *
+     * Example:
+     * ["Nike", "Adidas", "Puma"]
+     *
+     * API format remains List<String>.
+     * Database storage is handled by TruBlankCode entity.
+     */
+    private List<String> clientBrand = new ArrayList<>();
+
+    private String clientCategory;
+
+    private String clientTheme;
+
+    private String clientThemeImg;
+
+
+    // =========================================================
+    // CONSTRUCTOR
+    // =========================================================
+
+    public AssignClientRequest() {
+    }
+
+
+    // =========================================================
+    // CLIENT ID
+    // =========================================================
+
+    public Long getClientId() {
+        return clientId;
+    }
+
+    public void setClientId(Long clientId) {
+        this.clientId = clientId;
+    }
+
+
+    // =========================================================
+    // CLIENT NAME
+    // =========================================================
+
+    public String getClientName() {
+        return clientName;
+    }
+
+    public void setClientName(String clientName) {
+        this.clientName = clientName;
+    }
+
+
+    // =========================================================
+    // CLIENT IMAGE
+    // =========================================================
+
+    public String getClientImg() {
+        return clientImg;
+    }
+
+    public void setClientImg(String clientImg) {
+        this.clientImg = clientImg;
+    }
+
+
+    // =========================================================
+    // CLIENT BRAND
+    // =========================================================
+
+    public List<String> getClientBrand() {
+        return new ArrayList<>(clientBrand);
+    }
+
+    public void setClientBrand(List<String> clientBrand) {
+        this.clientBrand = clientBrand == null
+                ? new ArrayList<>()
+                : new ArrayList<>(clientBrand);
+    }
+
+
+    // =========================================================
+    // CLIENT CATEGORY
+    // =========================================================
+
+    public String getClientCategory() {
+        return clientCategory;
+    }
+
+    public void setClientCategory(String clientCategory) {
+        this.clientCategory = clientCategory;
+    }
+
+
+    // =========================================================
+    // CLIENT THEME
+    // =========================================================
+
+    public String getClientTheme() {
+        return clientTheme;
+    }
+
+    public void setClientTheme(String clientTheme) {
+        this.clientTheme = clientTheme;
+    }
+
+
+    // =========================================================
+    // CLIENT THEME IMAGE
+    // =========================================================
+
+    public String getClientThemeImg() {
+        return clientThemeImg;
+    }
+
+    public void setClientThemeImg(String clientThemeImg) {
+        this.clientThemeImg = clientThemeImg;
+    }
+}
